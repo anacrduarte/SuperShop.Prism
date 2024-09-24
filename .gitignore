@@ -396,3 +396,4 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+/SuperShopMobile/SuperShop.Prism/SuperShop.Prism/App.xaml.cs
