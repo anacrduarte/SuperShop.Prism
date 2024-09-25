@@ -4,12 +4,15 @@
              xmlns:prism="http://prismlibrary.com"
              xmlns:ffimageloadig ="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
              prism:ViewModelLocator.AutowireViewModel="True"
+             xmlns:i18n="clr-namespace:SuperShop.Prism.Helpers"
              x:Class="SuperShop.Prism.Views.ProductDetailPage"
-             Title="{Binding Title}">
+             Title="{Binding Title}"
+             BackgroundColor="{StaticResource ColorBackground}">
+    
     <ScrollView>
         <StackLayout Padding="10">
             <ffimageloadig:CachedImage 
-                   Aspect="AspectFill"
+                   Aspect="AspectFit"
                    Source="{Binding Product.ImageFullPath}"
                    CacheDuration="50"
                    RetryCount="3"
@@ -33,7 +36,7 @@
                     Grid.Row="0"
                     Grid.Column="0"
                     FontAttributes="Bold"
-                    Text="Name"/>
+                    Text="{i18n:Translate Name}"/>
                 <Label
                      Grid.Row="0"
                      Grid.Column="1"
@@ -43,7 +46,7 @@
                       Grid.Row="1"
                       Grid.Column="0"
                       FontAttributes="Bold"
-                      Text="Price"/>
+                      Text="{i18n:Translate Price}"/>
                 <Label
                        Grid.Row="1"
                        Grid.Column="1"
@@ -53,7 +56,7 @@
                        Grid.Row="2"
                        Grid.Column="0"
                        FontAttributes="Bold"
-                       Text="Last Purchase"/>
+                       Text="{i18n:Translate LastPurchase}"/>
                 <Label
                         Grid.Row="2"
                         Grid.Column="1"
@@ -62,7 +65,7 @@
                         Grid.Row="3"
                         Grid.Column="0"
                         FontAttributes="Bold"
-                        Text="Last Sale"/>
+                        Text="{i18n:Translate LastSale}"/>
                 <Label
                         Grid.Row="3"
                         Grid.Column="1"
@@ -71,7 +74,7 @@
                         Grid.Row="4"
                         Grid.Column="0"
                         FontAttributes="Bold"
-                        Text="Is Available"
+                        Text="{i18n:Translate IsAvailable}"
                         VerticalOptions="Center"/>
                 <CheckBox
                     Grid.Row="4"
@@ -83,7 +86,7 @@
                      Grid.Row="5"
                      Grid.Column="0"
                      FontAttributes="Bold"
-                     Text="Stock"/>
+                     Text="{i18n:Translate Stock}"/>
                 <Label
                         Grid.Row="5"
                         Grid.Column="1"
@@ -94,7 +97,7 @@
                 BackgroundColor="Navy"
                 Command="{Binding AddToCartBinding}"
                 CornerRadius="10"
-                Text="Add to Cart"
+                Text="{i18n:Translate AddToCart}"
                 TextColor="White"
                 VerticalOptions="EndAndExpand"/>
         </StackLayout>
