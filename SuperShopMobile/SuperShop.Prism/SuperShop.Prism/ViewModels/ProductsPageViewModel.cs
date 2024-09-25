@@ -1,6 +1,7 @@
 ﻿using Prism.Commands;
 using Prism.Mvvm;
 using Prism.Navigation;
+using SuperShop.Prism.Helpers;
 using SuperShop.Prism.ItemViewModels;
 using SuperShop.Prism.Models;
 using SuperShop.Prism.Services;
@@ -30,7 +31,7 @@ namespace SuperShop.Prism.ViewModels
         {
             _navigationService = navigationService;
             _apiService = apiService;
-            Title = "Products Page";
+            Title = Languages.Products;
 
             LoadProductsAsync();
         }
@@ -67,7 +68,7 @@ namespace SuperShop.Prism.ViewModels
             {
                 Device.BeginInvokeOnMainThread(async () =>
                 {
-                    await App.Current.MainPage.DisplayAlert("Error", "Check internet connection", "Accept");
+                    await App.Current.MainPage.DisplayAlert(Languages.Error, Languages.ConnectionError, Languages.Accept);
                 });
                
                 return;
@@ -82,7 +83,7 @@ namespace SuperShop.Prism.ViewModels
             IsRunning = false;
             if (!response.IsSuccess)
             {
-                await App.Current.MainPage.DisplayAlert("Error", response.Message, "Accept");
+                await App.Current.MainPage.DisplayAlert(Languages.Error, response.Message, Languages.Accept);
                 return;
             }
 
