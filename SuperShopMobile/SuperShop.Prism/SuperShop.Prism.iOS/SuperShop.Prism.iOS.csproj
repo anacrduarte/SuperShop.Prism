@@ -228,6 +228,13 @@
     <Content Include="Resources\Icon-App-76x76%401x.png" />
     <Content Include="Resources\Icon-App-76x76%402x.png" />
     <Content Include="Resources\Icon-App-83.5x83.5%402x.png" />
+    <Content Include="Resources\ic_card_giftcard.png" />
+    <Content Include="Resources\ic_exit_to_app.png" />
+    <Content Include="Resources\ic_history.png" />
+    <Content Include="Resources\ic_menu.png" />
+    <Content Include="Resources\ic_person.png" />
+    <Content Include="Resources\ic_shopping_cart.png" />
+    <Content Include="Resources\transferir %287%29.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
